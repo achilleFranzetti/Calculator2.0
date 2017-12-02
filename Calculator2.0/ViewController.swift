@@ -63,5 +63,15 @@ class ViewController: UIViewController {
             operandSequence.text = description + (brain.resutIsPending ? " …" : " =")
         }
     }
+    
+    
+    @IBAction func clear(_ sender: UIButton) {
+        brain = CalculatorBrain()
+        operandSequence.text = " "
+        displayValue = 0
+    }
+    
+    
+    
 }
 

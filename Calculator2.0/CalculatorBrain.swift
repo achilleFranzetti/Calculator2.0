@@ -20,21 +20,21 @@ struct CalculatorBrain {
         case unaryOperation((Double) -> Double, (String) -> String)
         case binaryOperation((Double, Double) -> Double, (String, String) -> String)
         case equals
-        //case clear
     }
     
     private var operations: Dictionary<String,Operation> = [
-        //"AC":  Operation.clear,
         "𝛑":   Operation.constant(Double.pi, "𝛑"),
-        "e":   Operation.constant(M_E, "e"),
-        "Rand": Operation.nullOperation({drand48()}, {"Rand"}),
-        "1/x": Operation.unaryOperation({1/$0}, {"(\($0))⁻¹"}),
-        "√":   Operation.unaryOperation(sqrt,  {"√(\($0))"}),
-        "cos": Operation.unaryOperation(cos,   {"cos(\($0))"}),
-        "sin": Operation.unaryOperation(sin,   {"sin(\($0))"}),
-        "tan": Operation.unaryOperation(tan,   {"tan(\($0))"}),
-        "ln":  Operation.unaryOperation(log2,  {"log(\($0))"}),
-        "±":   Operation.unaryOperation({-$0}, {"-\($0)"}),
+        "e":   Operation.constant(M_E,       "e"),
+        "rnd": Operation.nullOperation({drand48()}, {"rnd"}),
+        "1/x": Operation.unaryOperation({1/$0},     {"(\($0))⁻¹"}),
+        "√":   Operation.unaryOperation(sqrt,       {"√(\($0))"}),
+        "cos": Operation.unaryOperation(cos,        {"cos(\($0))"}),
+        "sin": Operation.unaryOperation(sin,        {"sin(\($0))"}),
+        "x³":  Operation.unaryOperation({$0*$0*$0}, {"(\($0))³"}),
+        "tan": Operation.unaryOperation(tan,        {"tan(\($0))"}),
+        "ln":  Operation.unaryOperation(log2,       {"log(\($0))"}),
+        "±":   Operation.unaryOperation({-$0},      {"-\($0)"}),
+        "x²":  Operation.unaryOperation({$0 * $0},  {"(\($0))²"}),
         "+":   Operation.binaryOperation({$0 + $1}, {"\($0) + \($1)"}),
         "-":   Operation.binaryOperation({$0 - $1}, {"\($0) - \($1)"}),
         "×":   Operation.binaryOperation({$0 * $1}, {"\($0) × \($1)"}),
@@ -56,7 +56,6 @@ struct CalculatorBrain {
                     accumulator = function(accumulator!)
                     accumulatorText = textFunction(accumulatorText!)
                 }
-                
             case .binaryOperation(let function, let textFunction):
                 performPendingBinaryOperation()
                 if accumulator != nil {
@@ -65,18 +64,8 @@ struct CalculatorBrain {
                                                                     descriptionFunction: textFunction,
                                                                     descriptionOperand: accumulatorText!)
                 }
-                
             case .equals:
                 performPendingBinaryOperation()
-
-                
-                /*
-                 case .clear:
-                 accumulator = 0
-                 accumulatorText = " "
-                 pendingBinaryOperation = nil
-                 */
-                
             }
         }
     }
