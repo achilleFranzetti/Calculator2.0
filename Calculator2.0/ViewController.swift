@@ -35,8 +35,7 @@ class ViewController: UIViewController {
             let numberFormatter = NumberFormatter()
             numberFormatter.numberStyle = .decimal
             numberFormatter.usesGroupingSeparator = false
-            //numberFormatter.maximumFractionDigits = Constants.numberOfDigitsAfterDecimalPoint
-            numberFormatter.maximumFractionDigits = 6
+            numberFormatter.maximumFractionDigits = Constants.numberOfDigitsAfterDecimalPoint
             display.text = numberFormatter.string(from: NSNumber(value: newValue))
         }
         get {
@@ -65,12 +64,20 @@ class ViewController: UIViewController {
     }
     
     
+    // Action executed if clear button (AC) pressed
     @IBAction func clear(_ sender: UIButton) {
         brain = CalculatorBrain()
         operandSequence.text = " "
         displayValue = 0
     }
     
+    // Action executed if Copyright button pressed
+    @IBAction func copyRight(_ sender: UIButton) {
+        brain = CalculatorBrain()
+        operandSequence.text = "Programming by Achille Franzetti.....  "
+        displayValue = 0
+        
+    }
     
     
 }

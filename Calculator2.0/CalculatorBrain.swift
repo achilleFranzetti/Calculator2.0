@@ -10,7 +10,7 @@ import Foundation
 
 struct CalculatorBrain {
     
-    // Numeric and text accumulator, to store operation result
+    // Numeric and text accumulator, to store operation result and string
     private var accumulator: Double?
     private var accumulatorText: String?
     
@@ -22,6 +22,8 @@ struct CalculatorBrain {
         case equals
     }
     
+    // This dictionary contains the list of all operations permitted on the calculator
+    // together with their string representation
     private var operations: Dictionary<String,Operation> = [
         "𝛑":   Operation.constant(Double.pi, "𝛑"),
         "e":   Operation.constant(M_E,       "e"),
@@ -42,6 +44,8 @@ struct CalculatorBrain {
         "=":   Operation.equals
     ]
     
+    // This function is called any time an operation must be performed
+    // It updates both the accumulator and the string sequence
     mutating func performOperation(_ symbol: String){
         if let operation = operations[symbol] {
             switch operation {
@@ -95,13 +99,13 @@ struct CalculatorBrain {
         }
     }
     
+    // This function is called any time a new operand must be memorized into the calculator brain
     mutating func setOperand(_ operand: Double){
         accumulator = operand
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
         numberFormatter.usesGroupingSeparator = false
-        //numberFormatter.maximumFractionDigits = Constants.numberOfDigitsAfterDecimalPoint
-        numberFormatter.maximumFractionDigits = 6
+        numberFormatter.maximumFractionDigits = Constants.numberOfDigitsAfterDecimalPoint
         accumulatorText = numberFormatter.string(from: NSNumber(value: operand))!
     }
     
@@ -117,7 +121,7 @@ struct CalculatorBrain {
         }
     }
     
-    // Operation string sequence description
+    // Operation string sequence description (read only)
     var description: String? {
         get {
             if pendingBinaryOperation != nil {

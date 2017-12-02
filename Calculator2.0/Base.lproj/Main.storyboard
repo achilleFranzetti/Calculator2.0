@@ -284,6 +284,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <state key="normal" title="©"/>
                                                         <connections>
+                                                            <action selector="copyRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gN3-H3-fKu"/>
                                                             <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ccG-iD-au6"/>
                                                         </connections>
                                                     </button>
