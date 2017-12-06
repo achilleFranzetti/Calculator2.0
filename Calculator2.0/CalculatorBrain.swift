@@ -109,12 +109,14 @@ struct CalculatorBrain {
         accumulatorText = numberFormatter.string(from: NSNumber(value: operand))!
     }
     
+    // Calculated value
     var result: Double? {
         get {
             return accumulator
         }
     }
     
+    // Calculated value
     var resutIsPending: Bool {
         get {
             return pendingBinaryOperation != nil
