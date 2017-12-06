@@ -31,12 +31,15 @@ Secondo me il modo più efficace per utilizzare il materiale è quello di seguir
 
 Aiuto sul progetto
 ==================
-Per quello che posso fare, il mio email address è:
-```let myEmail = "\(achille.franzetti)" + "\(@gmail.com)"```
+Per quello che posso, il mio email address è:
+```
+let myEmail = "\("achille.franzetti")" + "\("@gmail.com")"
+```
 
 Maintainers e contributor del progetto
 ======================================
 - Achille Franzetti
 - Eduardo Montoya
 
+___
 Questo README è scritto in linguaggio: Markdown.
