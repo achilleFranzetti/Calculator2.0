@@ -8,11 +8,11 @@ Ecco come si presenta graficamente il mio calcolatore:
 Cosa spiega questo progetto:
 
 **MVC - Model View Controller**
-
+-------------------------------
 Il pattern principale per la programmazione in ambito iOS. In particolare CalculatorBrain costituisce il model, ViewController è il controller, mentre la view è nello storyboard.
 
 **Closures**
-
+------------
 Blocchi di codice che possono essere utilizzati direttamente e/o "passati" nelle chiamate a funzioni etc.
 
 **Optionals**
