@@ -4,7 +4,7 @@ Questo progetto è la risoluzione del primo compito di programmazione assegnato.
 
 Ecco come si presenta graficamente il mio calcolatore:
 
-![Immagine Calculator2.0](/Calculator2.0.png?raw=true "Calculator 2.0")
+![Immagine Calculator2.0](/Calculator 2.0.png?raw=true "Calculator 2.0")
 
 Qual'è l'utilità del progetto?
 ==============================
