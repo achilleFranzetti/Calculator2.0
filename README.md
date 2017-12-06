@@ -27,13 +27,16 @@ Possibilità di definire con una serie di regole il layout grafico di una applic
 
 Come è possibile utilizzare questo materiale?
 =============================================
-
+Secondo me il modo più efficace per utilizzare il materiale è quello di seguire il corso SWIFT su ITunes University e poi cercare di fare i compiti assegnati, sbirciando a questo codice solo DOPO aver provato a realizzarlo da soli.
 
 Aiuto sul progetto
 ==================
+Per quello che posso fare, il mio email address è:
+`let myEmail = "\(achille.franzetti)" + "\(@gmail.com)"`
 
 Maintainers e contributor del progetto
 ======================================
-
+Achille Franzetti
+Eduardo Montoya
 
 Questo README è scritto in linguaggio: Markdown.
