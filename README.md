@@ -8,4 +8,5 @@ Ecco come si presenta graficamente il mio calcolatore:
 Cosa spiega questo progetto:
 
 MVC - Model View Controller
-Il pattern principale per la programmazione in ambito iOS. In particolare CalculatorBrain costituisce il model, il controller e la view. 
+Il pattern principale per la programmazione in ambito iOS. In particolare CalculatorBrain costituisce il model, ViewController è il controller, mentre la view è nello storyboard.
+
