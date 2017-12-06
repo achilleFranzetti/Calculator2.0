@@ -15,15 +15,15 @@ Il pattern principale per la programmazione in ambito iOS. In particolare Calcul
 ------------
 Blocchi di codice che possono essere utilizzati direttamente e/o "passati" nelle chiamate a funzioni etc.
 
-**Optionals**
+###**Optionals**
 
 Tipi dati che "potrebbero" essere in uno stato "unset" (e quindi non valere un bel nil) oppure in uno stato "set" (e quindi valere come un tipo dati associato...String,Double, etc etc) 
 
-**Enum-erations**
+###**Enum-erations**
 
 Tipi di dati costituiti da altri tipi dati.
 
-**Auto-layout**
+###**Auto-layout**
 
 Possibilità di definire con una serie di regole il layout grafico di una applicazione, in modo che si sappia auto-disporre nel caso in cui si cambi il device o l'orientazione dello stesso.
 
